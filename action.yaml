@@ -1,0 +1,14 @@
+name: Firebase CLI Deployment
+author: José Miguel Salazar <jmsalazardev@gmail.com>
+description: A GitHub Action to deploy to Firebase
+inputs:
+  params:
+    description: Additional parameters for firebase CLI
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'upload-cloud'
+  color: 'gray-dark'

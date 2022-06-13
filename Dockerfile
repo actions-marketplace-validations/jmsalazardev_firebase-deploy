@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14-slim
 WORKDIR /CLI
 RUN npm i -g firebase-tools
 RUN chmod +x entrypoint.sh

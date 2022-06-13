@@ -3,5 +3,5 @@ WORKDIR /usr/src/cli
 RUN chown node:node ./
 USER node
 RUN npm i firebase-tools
-COPY . .
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["/usr/src/cli/entrypoint.sh"]

@@ -4,4 +4,4 @@ RUN chown node:node ./
 USER node
 RUN npm i firebase-tools
 COPY . .
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/cli/entrypoint.sh"]

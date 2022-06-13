@@ -1,5 +1,7 @@
 FROM node:14-slim
-RUN npm i -g firebase-tools
-RUN chmod +x entrypoint.sh
+WORKDIR /usr/src/cli
+RUN chwon node:node ./
+USER node
+RUN npm i firebase-tools
 COPY . .
 ENTRYPOINT ["/entrypoint.sh"]

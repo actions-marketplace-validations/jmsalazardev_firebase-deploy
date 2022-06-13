@@ -1,5 +1,7 @@
 FROM node:14-alpine
+WORKDIR /CLI
 RUN npm i -g firebase-tools
-COPY README.md LICENSE /
-COPY entrypoint.sh /
+RUN chmod +x entrypoint.sh
+COPY README.md LICENSE entrypoint.sh /
+
 ENTRYPOINT ["/entrypoint.sh"]
